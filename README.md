@@ -99,12 +99,12 @@ migration_mgr.destroy() # to destroy your database
 
 Migrations folder content:
 * 0001_tables
-  * 001.create_table1.up.sql
-  * 002.create_table2.up.sql
-  * 001.drop_tables.down.sql
+   * 001.create_table1.up.sql
+   * 002.create_table2.up.sql
+   * 001.drop_tables.down.sql
 * 0002_views
-  * 001.create_view.up.sql
-  * 001.drop_view.down.sql
+   * 001.create_view.up.sql
+   * 001.drop_view.down.sql
 
 ```python
 from pgMigrationMgr import MigrationMgr
@@ -124,16 +124,16 @@ migration_mgr.destroy() # to destroy your database
 
 >The create function executes sql files in this order:
 >* 0001_tables
->  * 001.create_table1.up.sql
->  * 002.create_table2.up.sql
+>   * 001.create_table1.up.sql
+>   * 002.create_table2.up.sql
 >* 0002_views
->  * 001.create_view.up.sql
+>   * 001.create_view.up.sql
 
 >The destroy function executes sql files in this order:
 >* 0002_views
->  * 001.drop_view.down.sql
+>   * 001.drop_view.down.sql
 >* 0001_tables
->  * 001.drop_tables.down.sql
+>   * 001.drop_tables.down.sql
 
 ---
 
@@ -141,11 +141,11 @@ migration_mgr.destroy() # to destroy your database
 
 Migrations folder content:
 * 0001_schema1
-  * 001.create_table1.up.sql
-  * 001.drop_table1.down.sql
+   * 001.create_table1.up.sql
+   * 001.drop_table1.down.sql
 * 0002_schema2
-  * 001.create_table2.up.sql
-  * 001.drop_table2.down.sql
+   * 001.create_table2.up.sql
+   * 001.drop_table2.down.sql
 
 ```python
 from pgMigrationMgr import MigrationMgr
@@ -166,16 +166,16 @@ migration_mgr.destroy() # to destroy your database
 
 >The create function executes sql files in this order:
 >* 0001_schema1
->  * 001.create_table1.up.sql
+>   * 001.create_table1.up.sql
 >* 0002_schema2
->  * 001.create_table2.up.sql
+>   * 001.create_table2.up.sql
 > 
 > On database two schemas is created, schema1 and schema2
 
 >The destroy function executes sql files in this order:
 >* 0002_schema2
->  * 001.drop_table2.up.sql
+>   * 001.drop_table2.up.sql
 >* 0001_schema1
->  * 001.drop_table1.up.sql
+>   * 001.drop_table1.up.sql
 >
 > The Destroy function cannot drop the schemas
