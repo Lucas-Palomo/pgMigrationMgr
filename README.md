@@ -22,6 +22,14 @@ Migration Manager is a way to run .sql scripts.
   * **_.down.sql_**
     * Files are executed to destroy database
 
+## Arguments
+
+The following args are accepted
+* **is_separated_by_dir** = use True if migrations directory has another directories inside
+* **dir_like_schema** = use True if each directory inside migrations is a database schema
+* **verbose** = logs all executions if true
+
+
 ## Examples
 
 ---
